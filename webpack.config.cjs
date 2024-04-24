@@ -4,16 +4,19 @@ const path = require('path');
 module.exports = {
   mode: process.env.NODE_ENV,
   entry: './client/index.js',
+
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js',
   },
+
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(__dirname, './client/index.html'),
-      filename: 'index.html',
+      filename: './index.html',
     }),
   ],
+
   devServer: {
     static: {
       publicPath: '/',
@@ -26,12 +29,13 @@ module.exports = {
       },
     ],
     compress: true,
-    port: 8080,
+    port: 3000,
   },
+
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
@@ -51,7 +55,9 @@ module.exports = {
       },
     ],
   },
+
   resolve: {
     extensions: ['.js', '.jsx'],
+    modules: ['node_modules'],
   },
 };

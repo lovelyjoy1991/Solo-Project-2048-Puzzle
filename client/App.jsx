@@ -1,14 +1,14 @@
 import React from 'react';
-import Board from './components/Board';
-import Grid from './components/Grid';
-import Tile from './components/Tile';
+import MainContainer from './containers/MainContainer.jsx';
+import styles from './css/styles.css';
 
-const App = () => (
-  <div id='app'>
-    <Tile />
-    <Tile />
-    <Tile />
-  </div>
-);
+const App = () => {
+  return (
+    <div id='app'>
+      <h1>2048</h1>
+      <MainContainer />
+    </div>
+  );
+};
 
 export default App;
