@@ -49,7 +49,7 @@ body {
   background-color: rgb(203, 201, 198);
   border-radius: 8%;
   text-align: center;
-  color: rgb(222, 165, 165);
+  color: aliceblue;
   padding: 1rem;
 }
 .best {
@@ -59,7 +59,7 @@ body {
   background-color: rgb(203, 201, 198);
   border-radius: 8%;
   text-align: center;
-  color: rgb(222, 165, 165);
+  color: aliceblue;
   padding: 1rem;
 }
 button {
