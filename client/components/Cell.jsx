@@ -1,7 +1,12 @@
 import React from 'react';
+import Tile from './Tile';
 
-const Cell = (props) => {
-  return <div className='cell'></div>;
+const Cell = ({ id, value, x, y }) => {
+  return (
+    <div className='cell'>
+      {x},{y},{value}
+    </div>
+  );
 };
 
 export default Cell;
