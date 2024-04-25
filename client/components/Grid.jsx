@@ -5,9 +5,6 @@ const Grid = (props) => {
   return (
     <div className='grid'>
       <Cell />
-      <Cell />
-      <Cell />
-      <Cell />
     </div>
   );
 };

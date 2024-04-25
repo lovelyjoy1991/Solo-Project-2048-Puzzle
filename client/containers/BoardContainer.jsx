@@ -8,6 +8,7 @@ const BoardContainer = () => {
 
   return (
     <div className='board-container'>
+      <h5>Join the numbers and get to the 2048 tile!</h5>
       <Board />
     </div>
   );
