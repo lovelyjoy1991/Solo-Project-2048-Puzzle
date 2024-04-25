@@ -81,12 +81,28 @@ button {
   background-color: #d3a1c7;
 }
 .board-container {
+  height: 26rem;
+}
+.board {
+  height: 26rem;
   display: grid;
-  grid-template-columns: repeat(var(--grid-size), var(--cell-size));
-  grid-template-rows: repeat(var(--grid-size), var(--cell-size));
-  background-color: #ccc;
-  gap: var(--cell-gap);
+  grid-template-columns: repeat(4, 10.8vmin);
+  /* grid-template-rows: repeat(4, 12vmin); */
+  gap: 2vmin;
   border-radius: 1vmin;
-  padding: var(--cell-gap);
-  position: relative;
+  background-color: #a38e8e;
+  padding: 2vmin;
+  /* position: relative; */
+}
+.grid {
+  background-color: #a38e8e;
+  border-radius: 1vmin;
+  height: 24rem;
+  gap: 2vmin;
+}
+.cell {
+  background-color: rgb(233, 210, 210);
+  border-radius: 1vmin;
+  height: 10.8vmin;
+  margin-bottom: 2vmin;
 }

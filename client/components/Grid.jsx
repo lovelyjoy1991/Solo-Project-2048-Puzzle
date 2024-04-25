@@ -1,12 +1,13 @@
 import React from 'react';
-import Tile from './Tile';
+import Cell from './Cell';
 
 const Grid = (props) => {
   return (
     <div className='grid'>
-      <h3>Grid</h3>
-
-      <Tile />
+      <Cell />
+      <Cell />
+      <Cell />
+      <Cell />
     </div>
   );
 };

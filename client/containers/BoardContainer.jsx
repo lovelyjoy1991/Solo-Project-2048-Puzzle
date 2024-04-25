@@ -5,6 +5,7 @@ import Board from '../components/Board';
 
 const BoardContainer = () => {
   const dispatch = useDispatch();
+
   return (
     <div className='board-container'>
       <Board />
