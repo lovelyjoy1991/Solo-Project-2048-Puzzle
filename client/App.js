@@ -5,7 +5,6 @@ import styles from './css/styles.css';
 const App = () => {
   return (
     <div id='app'>
-      <h1>2048</h1>
       <MainContainer />
     </div>
   );

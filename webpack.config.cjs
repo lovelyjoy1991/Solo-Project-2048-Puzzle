@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   mode: process.env.NODE_ENV,
@@ -12,24 +13,25 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, './client/index.html'),
+      template: './client/index.html',
       filename: './index.html',
     }),
   ],
 
   devServer: {
+    host: 'localhost',
+    port: 3000,
     static: {
       publicPath: '/',
-      directory: path.join(__dirname, './build'),
+      directory: path.resolve(__dirname, './build'),
     },
-    proxy: [
-      {
-        context: ['/api'],
-        target: 'http://localhost:3000',
-      },
-    ],
-    compress: true,
-    port: 3000,
+
+    // proxy: [
+    //   {
+    //     context: ['/api'],
+    //     target: 'http://localhost:3000',
+    //   },
+    // ],
   },
 
   module: {
@@ -41,16 +43,16 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: ['@babel/preset-env', '@babel/preset-react'],
-            plugins: [
-              '@babel/plugin-transform-runtime',
-              '@babel/transform-async-to-generator',
-            ],
+            // plugins: [
+            //   '@babel/plugin-transform-runtime',
+            //   '@babel/transform-async-to-generator',
+            // ],
           },
         },
       },
       {
         test: /\.s?css$/,
-        exclude: /node_modules/,
+        // exclude: /node_modules/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
     ],

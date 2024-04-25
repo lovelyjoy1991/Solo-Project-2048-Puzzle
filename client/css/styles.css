@@ -1,8 +1,92 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
 body {
   color: #967676;
-  background-color: rgb(188, 215, 206);
-  text-align: center;
+  background-color: rgb(234, 228, 234);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 150vh;
+  margin: 0;
 }
 .container {
-  background-color: rgb(204, 165, 212);
+  width: 100%;
+  min-width: 800 rem;
+}
+.header-container {
+  display: grid;
+  /* grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 2fr 1fr;*/
+  gap: 1rem;
+  /* height: 20; */
+  grid-template-areas:
+    'a  b  c'
+    'a  b  c'
+    'a  d  e';
+}
+.logo {
+  font-size: 5.5vmin;
+  display: block;
+  height: 8rem;
+  width: 8rem;
+  background-color: rgb(232, 96, 173);
+  border-radius: 8%;
+  text-align: center;
+  color: white;
+  /* padding: 1rem; */
+  line-height: 8rem;
+}
+.score {
+  font-size: 1.5rem;
+  height: 8rem;
+  width: 8rem;
+  background-color: rgb(203, 201, 198);
+  border-radius: 8%;
+  text-align: center;
+  color: rgb(222, 165, 165);
+  padding: 1rem;
+}
+.best {
+  font-size: 1.5rem;
+  height: 8rem;
+  width: 8rem;
+  background-color: rgb(203, 201, 198);
+  border-radius: 8%;
+  text-align: center;
+  color: rgb(222, 165, 165);
+  padding: 1rem;
+}
+button {
+  border-radius: 1rem;
+  height: 3rem;
+  width: 8rem;
+  border-color: #d3a1c7;
+}
+.login {
+  color: aliceblue;
+  background-color: #d3a1c7;
+}
+.reset {
+  color: aliceblue;
+  background-color: #de06ab;
+}
+.sign-up {
+  color: aliceblue;
+  background-color: #d3a1c7;
+}
+.board-container {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-size), var(--cell-size));
+  grid-template-rows: repeat(var(--grid-size), var(--cell-size));
+  background-color: #ccc;
+  gap: var(--cell-gap);
+  border-radius: 1vmin;
+  padding: var(--cell-gap);
+  position: relative;
 }
