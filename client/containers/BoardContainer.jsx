@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import Board from '../components/Board';
 
 const BoardContainer = () => {
+  // const { grid, score, gameOver } = useSelector();
   const dispatch = useDispatch();
 
   return (
